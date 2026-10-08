@@ -1,0 +1,40 @@
+<!doctype html>
+<!--
+  A starting template for share-cards. Copy it and make it yours.
+  Query parameters: title, subtitle, accent (CSS colour), plus width/height/safeW/safeH from the
+  preset. Everything that matters sits inside the safe area, scaled to fit any preset.
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; width: 100vw; height: 100vh; overflow: hidden; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #fff;
+    background:
+      radial-gradient(60% 80% at 15% 10%, color-mix(in srgb, var(--accent) 55%, transparent), transparent 70%),
+      radial-gradient(60% 80% at 90% 100%, rgb(70 90 255 / .45), transparent 70%),
+      #0d1024;
+  }
+  /* Designed at 1200x630, scaled into the safe area. */
+  .card { position: absolute; left: 50%; top: 50%; width: 1200px; height: 630px; display: flex;
+    flex-direction: column; justify-content: center; padding: 0 96px; box-sizing: border-box; }
+  h1 { font-size: 76px; line-height: 1.05; margin: 0; letter-spacing: -.02em; }
+  p { font-size: 32px; margin: 28px 0 0; opacity: .8; }
+  .bar { width: 96px; height: 10px; border-radius: 5px; background: var(--accent); margin-bottom: 40px; }
+</style>
+</head>
+<body>
+  <div class="card"><div class="bar"></div><h1 id="title"></h1><p id="subtitle"></p></div>
+  <script>
+    const q = new URLSearchParams(location.search);
+    document.documentElement.style.setProperty('--accent', q.get('accent') || '#ff4d6d');
+    document.getElementById('title').textContent = q.get('title') || 'Your title here';
+    document.getElementById('subtitle').textContent = q.get('subtitle') || '';
+    const safeW = +q.get('safeW') || innerWidth, safeH = +q.get('safeH') || innerHeight;
+    const k = Math.min(safeW / 1200, safeH / 630);
+    document.querySelector('.card').style.transform = `translate(-50%, -50%) scale(${k})`;
+  </script>
+</body>
+</html>

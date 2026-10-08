@@ -1,0 +1,16 @@
+{
+  "name": "share-cards",
+  "version": "0.1.0",
+  "description": "Render an HTML template to PNG at social-media sizes (Open Graph, X, YouTube, LinkedIn, Instagram) with headless Chrome. Zero dependencies.",
+  "type": "module",
+  "bin": { "share-cards": "bin/share-cards.mjs" },
+  "exports": "./bin/share-cards.mjs",
+  "files": ["bin", "examples"],
+  "engines": { "node": ">=20" },
+  "scripts": { "test": "node --test" },
+  "keywords": ["open-graph", "og-image", "social-cards", "headless-chrome", "screenshot"],
+  "repository": { "type": "git", "url": "git+https://github.com/firedanceio/share-cards.git" },
+  "homepage": "https://github.com/firedanceio/share-cards",
+  "license": "Apache-2.0",
+  "author": "Firedance (https://firedance.io)"
+}

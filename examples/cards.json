@@ -1,0 +1,5 @@
+[
+  { "template": "basic.html", "preset": "og", "out": "out/og.png", "params": { "title": "Hello from share-cards", "subtitle": "One template, every size" } },
+  { "template": "basic.html", "preset": "x-header", "out": "out/x-header.png", "params": { "title": "Hello from share-cards" } },
+  { "template": "basic.html", "preset": "square", "out": "out/square.png", "params": { "title": "Square post", "accent": "#22c55e" } }
+]
