@@ -82,5 +82,5 @@ you need smaller files.
 
 ## Licence
 
-Apache-2.0. Made by [Firedance](https://firedance.io), where it renders the share images for our
+Apache-2.0. Made by [Firedance](https://www.getfiredance.com), where it renders the share images for our
 site and social profiles.

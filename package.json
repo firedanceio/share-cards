@@ -12,5 +12,5 @@
   "repository": { "type": "git", "url": "git+https://github.com/firedanceio/share-cards.git" },
   "homepage": "https://github.com/firedanceio/share-cards",
   "license": "Apache-2.0",
-  "author": "Firedance (https://firedance.io)"
+  "author": "Firedance (https://www.getfiredance.com)"
 }
